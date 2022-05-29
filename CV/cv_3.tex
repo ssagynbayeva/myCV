@@ -1,0 +1,520 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 2.0 (19/3/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%!TEX program = xelatex
+% NOTICE: This template must be compiled with XeLaTeX, the line above should
+% ensure this happens automatically but if it doesn't you will need to specify 
+% XeLaTeX as the engine in your editor or script
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
+
+\input{structure.tex} % Include the file that specifies the document structure
+
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example right footer:
+%\rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+ % Begin the multi-column environment
+\begin{paracol}{2}
+%----------------------------------------------------------------------------------------
+%	NAME AND CURRICULUM VITAE TEXT
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\centering % Centre text
+	{\sffamily\Huge Sabina Sagynbayeva}\\\medskip % Your name
+	{\Huge\color{headings}\cvtextfont Curriculum Vitae}
+}
+\switchcolumn % Switch to the next paracol column
+%----------------------------------------------------------------------------------------
+%	COLOURED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & 100 Nicolls Rd, Stony Brook, NY 11794 \\ % Address
+			\raisebox{-1pt}{\faPhone} & +1 (631) 428-5344 \\ % Phone number
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:sabina.sagynbayeva@stonybrook.edu}{sabina.sagynbayeva@stonybrook.edu} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{http://ssagynbayeva.com/}{http://ssagynbayeva.com/} \\ % Website
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
+\end{paracol}
+\begin{paracol}{1}
+%----------------------------------------------------------------------------------------
+%	MAJOR RESEARCH PROJECT
+%----------------------------------------------------------------------------------------
+
+
+%\medskip % Extra whitespace before the next section
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	
+	%------------------------------------------------
+	
+	\educationentry{2021 - Present} % Duration
+	{MA/PhD:} % Degree
+	{Physics (Astrophysics)} % Department
+	{*Deferred my admission to Spring 2021 due to COVID-19} %Honours
+	{Stony Brook University} % Institution
+	{Stony Brook, NY}
+	
+	%------------------------------------------------
+	
+	\educationentry{2016 -- 2020} % Duration
+	{Bachelor of Science:} % Degree
+	{Physics} % Department
+	{Minor: Mathematics} %Honours
+	{Nazarbayev University} % Institution
+	{Nur-Sultan, Kazakhstan}
+	
+	%------------------------------------------------
+
+\end{supertabular}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Research Experience}
+
+% Blank \workposition command to add another job:
+
+%\workposition{} % Duration
+%{} % FT/PT (full time or part time)
+%{} % Employer
+%{} % Job title
+%{} % Description
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\workposition{Current, from Jul 2021} % Duration
+{PT} % FT/PT (full time or part time)
+{Subaru Telescope/Eureka Scientific} % Employer
+{Research Intern, Advisor: Dr. Thayne Currie} % Job title
+{Direct Imaging and Astrometry of an Extrasolar Planet} % Description
+
+\workposition{Current, from Feb 2021} % Duration
+{FT} % FT/PT (full time or part time)
+{Stony Brook University/Flatiron Institute} % Employer
+{Research Assistant, Advisor: Dr. Phil Armitage} % Job title
+{Migration of Planets and Stars in Protoplanetary and AGN Disks} % Description
+
+%------------------------------------------------
+
+\workposition{Jun 2020 -- Aug 2020} % Duration
+{FT} % FT/PT (full time or part time)
+{Nazarbayev University} % Employer
+{Research Assistant, Advisor: Dr. Daniele Malafarina} % Job title
+{Implications of the Departure From Spherical Symmetry for Black Holes and Black Hole Mimickers%\vspace*{-2mm}
+%\begin{itemize}
+ %   \item Evaluated the collision energy for test particles in general stationary axially symmetric space-times (Erez-Rosen and Zipoy-Voorhees space-times) \vspace*{-2mm}
+  %  \item Applied the above formalism to the case of a rotating deformed source with a quadrupole moment
+%\end{itemize}
+}  % Description
+
+%------------------------------------------------
+
+\workposition{May 2019 -- Aug 2019} % Duration
+{FT} % FT/PT (full time or part time)
+{University of Cambridge} % Employer
+{Research Intern, Advisors: Dr. Roman Rafikov, Dr. William B\'ethune} % Job title
+{Self-gravitating Planetary Envelopes and the Core-nucleated Instability%\vspace*{-2mm}
+%\begin{itemize}
+   % \item Developed Python solver for 1D simulations of self-gravitating planetary envelopes with %isothermal and adiabatic equations of state \vspace*{-6mm}
+    %\item Performed 1D simulations using PLUTO code and compared the results with my Python solver
+%\end{itemize}
+} % Description
+
+%------------------------------------------------
+
+\workposition{Aug 2018 -- Dec 2019} % Duration
+{PT} % FT/PT (full time or part time)
+{Nazarbayev University} % Employer
+{Research Assistant, Advisors: Dr. Ernazar Abdikamalov, Dr. Dana Alina} % Job title
+{Analysis of the Relative Orientation of the Magnetic Field Structure in Monoceros OB1 Region%\vspace*{-2mm}
+%\begin{itemize}
+ %   \item Analyzed data from Herschel and Planck telescopes using Python to identify what roles the structure of clumps and filaments play in the formation of stars \vspace*{-2mm}
+  %  \item Analyzed the correlation between magnetic field and structure of filaments in the %Monoceros OB1 molecular cloud
+%\end{itemize}
+} % Description
+
+%------------------------------------------------
+
+\vspace*{1mm} % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+% Example \longformdescription{} command to add another publication:
+
+%\longformpublication{Reference (format this manually as desired)}
+
+%------------------------------------------------
+\longformpublication{Thayne Currie et al. [including \textbf{S. Sagynbayeva}]. \href{}{"Direct Imaging and Astrometric Discovery of an
+Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022).}
+
+\longformpublication{Daniele Malafarina, \textbf{Sabina Sagynbayeva}. \href{https://trebuchet.public.springernature.app/get_content/e19b1eb6-daac-4e48-a946-f55457e622aa}{"What a difference a quadrupole makes?"} \textit{General Relativity and Gravitation} (2021).}
+
+\longformpublication{D. Alina et al. [including \textbf{S. Sagynbayeva}]. \href{https://arxiv.org/abs/2007.15344}{"Large-scale magnetic field in the Monoceros OB-1 East molecular cloud."} \textit{Astronomy \& Astrophysics} (2020).}
+
+
+\section{Awards \& fellowships}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	
+	\tableentry{2020}  
+	{Young Researchers Alliance FRIP program}
+	{The stipend awarded to students for research projects. Stipend: \$1,000}
+	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
+	
+	
+	%------------------------------------------------
+	
+	\tableentry{2019}  
+	{\href{http://yessenovfoundation.org/en/}{Yessenov Foundation Scholarship}}
+	{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. 
+	
+	Funding: \$7,500.}
+	
+	%------------------------------------------------
+	\tableentry{2018 -- 2019}  
+	{Dean’s List}
+	{For achieving a semester GPA higher than 3.75 (out of 4.00)}
+	
+	%------------------------------------------------
+	\tableentry{2015}  
+	{Altyn belgi}
+	{National award for exceptional high-school performance awarded to 2\% of high-school graduates}
+	
+	%------------------------------------------------
+
+
+
+%\medskip % Extra whitespace before the next section
+\section{Invited talks}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	
+	\tableentry{May 2022}  
+	{AGN accretion disks and black hole binaries}
+	{University of Kansas}
+	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
+	
+	
+	%------------------------------------------------
+	
+	\tableentry{Apr 2021}  
+	{How do planets form?}
+	{Astronomy on Tap, Baton Rouge}
+%----------------------------------------------------------------------------------------
+
+
+\section{Workshops \& schools}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	
+	\tableentry{2020}  
+	{\href{https://yessenovfoundation.org/en/o-fonde/programmyi/resursyi/razvitie-it-kompetentsiy/yessenov-data-lab-2020/}{Yessenov Foundation Data Lab}}
+	{5-week intensive summer training on data analysis and Machine Learning algorithms. Participation by the results of the 3-stage competition.}
+	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
+	
+	
+	%------------------------------------------------
+	
+	\tableentry{2020}  
+	{Motion Design for Social Impact}
+	{5-week school on the basics of motion design on Adobe After Effects. }
+	
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Teaching appointments} 
+%------------------------------------------------
+	\tableentry{Mar 2022 -- Apr 2021}  
+	{Group Project Leader}
+	{ Women in Science and Engineering program
+	
+	Stony Brook University}
+	
+	\tableentry{Aug 2021 -- Dec 2021}  
+	{Teaching Assistant}
+	{\textbf{Courses}: Introduction to Planetary Sciences
+	
+	Department of Physics \& Astronomy, Stony Brook University}
+	
+	
+	\tableentry{Jan 2017 -- Jan 2019}  
+	{Tutor of Mathematics}
+	{\textbf{Courses}: Calculus I,II,III, Linear Algebra, Ordinary Differential Equations, Real Analysis
+	
+	Department of Mathematics, Nazarbayev University}
+	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
+
+\section{Selected outreach}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	
+	\tableentry{Sep 2021 -- present}  
+	{Senator for the Department of Physics \& Astronomy, Member of the Graduate DEI Committee}
+	{Graduate Student Organization, Stony Brook University}
+	
+	\tableentry{Jun 2021 -- present}  
+	{Underclass person-at-large \& Director of External Affairs}
+	{Physics Graduate Student Association, Department of Physics \& Astronomy, Stony Brook University}
+	
+	\tableentry{Mar 2021 -- present}  
+	{Member of the Diversity Committee}
+	{Department of Physics \& Astronomy, Stony Brook University}
+	
+	
+	\tableentry{Jan 2021 -- present}  
+	{Writer for \href{https://astrobites.org/author/ssagynbayeva/}{Astrobites.org}, Chair of the Advertising and Undergraduate Committees}
+	{A website where graduate students publish daily summaries of recent papers on astro-ph.}
+
+	
+	
+	%------------------------------------------------
+	
+	\tableentry{Apr 2018 -- May 2020}  
+	{President of the Women in Physics Club}
+	{Nazarbayev University}
+	
+
+	%------------------------------------------------
+	\tableentry{Oct 2017 -- Sep 2020}  
+	{Volunteer at the “Education for all” center}
+	{An organization that helps children with mental and physical disabilities. 
+	
+	I organized the first three inclusive musical theatre performances in Kazakhstan}
+	
+	\tableentry{Sep 2017 -- May 2020}  
+	{Physics Department Representative}
+	{Student Council of Nazarbayev University}
+%------------------------------------------------
+
+	%------------------------------------------------
+\tableentry{Nov 2017}  
+{Coordinator of the Children's Development Foundation's \textit{Warm Winter} project}
+{Coordinated a group of students to help low-income families that cannot afford winter clothes for their kids.}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+
+
+\section{Computational Skills} 
+%------------------------------------------------
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	
+	%------------------------------------------------
+	
+	\educationentry{Programming languages} % Duration
+	{} % Degree
+	{Python, C/C++, IDL, Julia, SQL} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	
+	%------------------------------------------------
+	
+	\educationentry{Other} % Duration
+	{} % Degree
+	{Athena++, REBOUND, PLUTO, Mathematica, ds9, \LaTeX} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	
+	%------------------------------------------------
+
+\end{supertabular}
+\section{Languages}
+English (advanced), Russian (native), Spanish (B1)
+%----------------------------------------------------------------------------------------
+\section{Hobbies} 
+%------------------------------------------------
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	
+	%------------------------------------------------
+	
+	\educationentry{Songwriting} % Duration
+	{} % Degree
+	{1 album, 3 singles on \href{http://sabinasagynbayeva.tilda.ws/music}{all streaming platforms}} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	
+	%------------------------------------------------
+	
+	\educationentry{Musical instruments} % Duration
+	{} % Degree
+	{drum kit, piano, guitar, ukulele} % Department
+	{} %Honours
+	{} % Institution
+	{}
+		
+	\educationentry{Dance styles} % Duration
+	{} % Degree
+	{waacking, house, jazz-funk, vogue} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	\educationentry{Additional interests} % Duration
+	{} % Degree
+	{\href{http://sabinasagynbayeva.tilda.ws/photography}{photography}, chess} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	%------------------------------------------------
+
+\end{supertabular}
+\end{paracol}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
