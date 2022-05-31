@@ -1,6 +1,6 @@
 # Github workflow to compile latex and deploy the pdf to an orphan branch.
 # The latest compiled pdf is at available at e.g.
-# https://github.com/dgerosa/reponame/blob/build/filename.pdf
+# https://github.com/ssagynbayeva/reponame/blob/build/filename.pdf
 
 name: writecv
 on: [push]
@@ -18,7 +18,7 @@ jobs:
       - name: LaTeX compile
         working-directory: ${{ env.DIR }}
         # run: latexmk -pdf -bibtex ${{ env.FILE }}
-        run: xelatex ${{ env.FILE }};
+        run: xelatex -interaction=nonstopmode; xelatex ${{ env.FILE }};
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
