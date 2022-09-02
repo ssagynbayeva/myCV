@@ -3,6 +3,15 @@
 % XeLaTeX Template
 % Version 2.0 (19/3/2018)
 %
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 %!TEX program = xelatex
 % NOTICE: This template must be compiled with XeLaTeX, the line above should
@@ -16,8 +25,6 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
-
-\nonstopmode
 
 \input{structure.tex} % Include the file that specifies the document structure
 
@@ -53,7 +60,7 @@
 			\raisebox{-1pt}{\faHome} & 100 Nicolls Rd, Stony Brook, NY 11794 \\ % Address
 			\raisebox{-1pt}{\faPhone} & +1 (631) 428-5344 \\ % Phone number
 			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:sabina.sagynbayeva@stonybrook.edu}{sabina.sagynbayeva@stonybrook.edu} \\ % Email address
-			\raisebox{-1pt}{\small\faDesktop} & \href{http://ssagynbayeva.com/}{http://ssagynbayeva.com/} \\ % Website
+			\raisebox{-1pt}{\small\faDesktop} & \href{http://ssagynbayeva.com/}{https://ssagynbayeva.github.io} \\ % Website
 			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
 			%\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/username}{https://www.linkedin.com/in/username} \\ % LinkedIn profile
 			% See fontawesome.pdf in the fonts folder for all icons you can use
@@ -78,7 +85,7 @@
 
 %\educationentry{} % Duration
 %{} % Degree
-%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Honours, achievements or other comments
 %{} % Department
 %{} % Institution
 
@@ -96,7 +103,7 @@
 	\educationentry{2021 - Present} % Duration
 	{MA/PhD:} % Degree
 	{Physics (Astrophysics)} % Department
-	{*Deferred my admission to Spring 2021 due to COVID-19} %Honours
+	{*Deferred my admission to Spring 2021 due to COVID-19} % Comment
 	{Stony Brook University} % Institution
 	{Stony Brook, NY}
 	
@@ -105,7 +112,7 @@
 	\educationentry{2016 -- 2020} % Duration
 	{Bachelor of Science:} % Degree
 	{Physics} % Department
-	{Minor: Mathematics} %Honours
+	{Minor: Mathematics, Literature} % Minor
 	{Nazarbayev University} % Institution
 	{Nur-Sultan, Kazakhstan}
 	
@@ -113,7 +120,7 @@
 
 \end{supertabular}
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE
+%	RESEARCH EXPERIENCE
 %----------------------------------------------------------------------------------------
 
 \section{Research Experience}
@@ -123,37 +130,42 @@
 %\workposition{} % Duration
 %{} % FT/PT (full time or part time)
 %{} % Employer
-%{} % Job title
-%{} % Description
+%{} % Job title, advisors
+%{} % Project title
 
 % All 5 parameters must be supplied but any can be empty if you don't need them
 
 %------------------------------------------------
+\workposition{Current, from Jun 2022} % Duration
+{FT} % FT/PT (full time or part time)
+{Flatiron Institute (CCA)} % Employer
+{Research Assistant, Advisors: Dr. Rodrigo Luger, Dr. Will Farr} % Job title
+{Hierarchical Bayesian Modeling of the Stellar Surface of HAT-P-11} % Project
 
-\workposition{Current, from Jul 2021} % Duration
-{PT} % FT/PT (full time or part time)
-{Subaru Telescope/Eureka Scientific} % Employer
-{Research Intern, Advisor: Dr. Thayne Currie} % Job title
-{Direct Imaging and Astrometry of an Extrasolar Planet} % Description
+\workposition{Current, from Feb 2022} % Duration
+{FT} % FT/PT (full time or part time)
+{Stony Brook University/Flatiron Institute (CCA)} % Employer
+{Research Assistant, Advisors: Dr. Phil Armitage, Dr. Saavik Ford, Dr. Barry McKernan} % Job title
+{Binary Black Holes Mergers in AGN Disks} % Project
 
 \workposition{Current, from Feb 2021} % Duration
 {FT} % FT/PT (full time or part time)
-{Stony Brook University/Flatiron Institute} % Employer
+{Stony Brook University/Flatiron Institute (CCA)} % Employer
 {Research Assistant, Advisor: Dr. Phil Armitage} % Job title
-{Migration of Planets and Stars in Protoplanetary and AGN Disks} % Description
+{Migration of Planets and Stars in Protoplanetary and AGN Disks} % Project
 
 %------------------------------------------------
+\workposition{Jul 2021 -- Aug 2021} % Duration
+{PT} % FT/PT (full time or part time)
+{Subaru Telescope/Eureka Scientific} % Employer
+{Research Intern, Advisor: Dr. Thayne Currie} % Job title
+{Direct Imaging and Astrometry of an Extrasolar Planet} % Project
 
 \workposition{Jun 2020 -- Aug 2020} % Duration
 {FT} % FT/PT (full time or part time)
 {Nazarbayev University} % Employer
 {Research Assistant, Advisor: Dr. Daniele Malafarina} % Job title
-{Implications of the Departure From Spherical Symmetry for Black Holes and Black Hole Mimickers%\vspace*{-2mm}
-%\begin{itemize}
- %   \item Evaluated the collision energy for test particles in general stationary axially symmetric space-times (Erez-Rosen and Zipoy-Voorhees space-times) \vspace*{-2mm}
-  %  \item Applied the above formalism to the case of a rotating deformed source with a quadrupole moment
-%\end{itemize}
-}  % Description
+{Implications of the Departure From Spherical Symmetry for Black Holes and Black Hole Mimickers}  % Project
 
 %------------------------------------------------
 
@@ -161,12 +173,7 @@
 {FT} % FT/PT (full time or part time)
 {University of Cambridge} % Employer
 {Research Intern, Advisors: Dr. Roman Rafikov, Dr. William B\'ethune} % Job title
-{Self-gravitating Planetary Envelopes and the Core-nucleated Instability%\vspace*{-2mm}
-%\begin{itemize}
-   % \item Developed Python solver for 1D simulations of self-gravitating planetary envelopes with %isothermal and adiabatic equations of state \vspace*{-6mm}
-    %\item Performed 1D simulations using PLUTO code and compared the results with my Python solver
-%\end{itemize}
-} % Description
+{Self-gravitating Planetary Envelopes and the Core-nucleated Instability} % Project
 
 %------------------------------------------------
 
@@ -174,12 +181,7 @@
 {PT} % FT/PT (full time or part time)
 {Nazarbayev University} % Employer
 {Research Assistant, Advisors: Dr. Ernazar Abdikamalov, Dr. Dana Alina} % Job title
-{Analysis of the Relative Orientation of the Magnetic Field Structure in Monoceros OB1 Region%\vspace*{-2mm}
-%\begin{itemize}
- %   \item Analyzed data from Herschel and Planck telescopes using Python to identify what roles the structure of clumps and filaments play in the formation of stars \vspace*{-2mm}
-  %  \item Analyzed the correlation between magnetic field and structure of filaments in the %Monoceros OB1 molecular cloud
-%\end{itemize}
-} % Description
+{Analysis of the Relative Orientation of the Magnetic Field Structure in Monoceros OB1 Region} % Project
 
 %------------------------------------------------
 
@@ -203,6 +205,9 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
 
 \longformpublication{D. Alina et al. [including \textbf{S. Sagynbayeva}]. \href{https://arxiv.org/abs/2007.15344}{"Large-scale magnetic field in the Monoceros OB-1 East molecular cloud."} \textit{Astronomy \& Astrophysics} (2020).}
 
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
 
 \section{Awards \& fellowships}
 
@@ -218,30 +223,33 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
  % Start a table with two columns, the table will ensure everything is aligned
 	
 	%------------------------------------------------
+	\tableentry{2022 -- 2024}  % parameter 1
+	{\href{https://www.lsstcorporation.org/fellowship_program}{LSSTC Data Science Fellowship Program}} % parameter 2
+	{The program that consists of six week-long sessions on data science.} % parameter 3
 	
-	\tableentry{2020}  
+	\awardsentry{2020}  
 	{Young Researchers Alliance FRIP program}
 	{The stipend awarded to students for research projects. Stipend: \$1,000}
 	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
 	
 	
 	%------------------------------------------------
-	
-	\tableentry{2019}  
+	\nonstopmode
+	\awardsentry{2019}  
 	{\href{http://yessenovfoundation.org/en/}{Yessenov Foundation Scholarship}}
 	{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. 
 	
-	Funding: \$7,500.}
-	
+	Funding: \$7,500}
+
 	%------------------------------------------------
-	\tableentry{2018 -- 2019}  
+	\awardsentry{2018 -- 2019}  
 	{Dean’s List}
 	{For achieving a semester GPA higher than 3.75 (out of 4.00)}
 	
 	%------------------------------------------------
-	\tableentry{2015}  
-	{Altyn belgi}
-	{National award for exceptional high-school performance awarded to 2\% of high-school graduates}
+% 	\tableentry{2015}  
+% 	{Altyn belgi}
+% 	{National award for exceptional high-school performance awarded to 2\% of high-school graduates}
 	
 	%------------------------------------------------
 
@@ -262,22 +270,19 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
  % Start a table with two columns, the table will ensure everything is aligned
 	
 	%------------------------------------------------
+	\awardsentry{Aug 2022}  
+	{Oceans in the Solar System}
+	{Astronomy on Tap, NYC}
 	
-	\tableentry{May 2022}  
+	\awardsentry{May 2022}  
 	{AGN accretion disks and black hole binaries}
 	{University of Kansas}
-	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
 	
-	
-	%------------------------------------------------
-	
-	\tableentry{Apr 2021}  
+	\awardsentry{Apr 2021} 
 	{How do planets form?}
 	{Astronomy on Tap, Baton Rouge}
 %----------------------------------------------------------------------------------------
 
-
-\section{Workshops \& schools}
 
 % Example \tableentry{} command to add another line:
 
@@ -291,56 +296,41 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
  % Start a table with two columns, the table will ensure everything is aligned
 	
 	%------------------------------------------------
-	
-	\tableentry{2020}  
-	{\href{https://yessenovfoundation.org/en/o-fonde/programmyi/resursyi/razvitie-it-kompetentsiy/yessenov-data-lab-2020/}{Yessenov Foundation Data Lab}}
-	{5-week intensive summer training on data analysis and Machine Learning algorithms. Participation by the results of the 3-stage competition.}
-	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
-	
-	
-	%------------------------------------------------
-	
-	\tableentry{2020}  
-	{Motion Design for Social Impact}
-	{5-week school on the basics of motion design on Adobe After Effects. }
-	
-
-
-
 
 %----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
-
-
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
+%	TEACHING
 %----------------------------------------------------------------------------------------
 
 \section{Teaching appointments} 
 %------------------------------------------------
-	\tableentry{Mar 2022 -- Apr 2021}  
-	{Group Project Leader}
-	{ Women in Science and Engineering program
-	
-	Stony Brook University}
-	
-	\tableentry{Aug 2021 -- Dec 2021}  
+    \awardsentry{Aug 2022 -- Dec 2022} 
 	{Teaching Assistant}
 	{\textbf{Courses}: Introduction to Planetary Sciences
 	
 	Department of Physics \& Astronomy, Stony Brook University}
 	
 	
-	\tableentry{Jan 2017 -- Jan 2019}  
+	\awardsentry{Mar 2022 -- Apr 2021}  
+	{Group Project Leader}
+	{ Women in Science and Engineering program
+	
+	Stony Brook University}
+	
+	\awardsentry{Aug 2021 -- Dec 2021} 
+	{Teaching Assistant}
+	{\textbf{Courses}: Introduction to Planetary Sciences
+	
+	Department of Physics \& Astronomy, Stony Brook University}
+	
+	
+	\awardsentry{Jan 2017 -- Jan 2019} 
 	{Tutor of Mathematics}
 	{\textbf{Courses}: Calculus I,II,III, Linear Algebra, Ordinary Differential Equations, Real Analysis
 	
 	Department of Mathematics, Nazarbayev University}
 	%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
 
-\section{Selected outreach}
+\section{Departmental Service}
 
 % Example \tableentry{} command to add another line:
 
@@ -355,20 +345,24 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
 	
 	%------------------------------------------------
 	
-	\tableentry{Sep 2021 -- present}  
+	\awardsentry{Sep 2021 -- present}  
 	{Senator for the Department of Physics \& Astronomy, Member of the Graduate DEI Committee}
 	{Graduate Student Organization, Stony Brook University}
 	
-	\tableentry{Jun 2021 -- present}  
+	\awardsentry{Jun 2021 -- present}  
 	{Underclass person-at-large \& Director of External Affairs}
 	{Physics Graduate Student Association, Department of Physics \& Astronomy, Stony Brook University}
 	
-	\tableentry{Mar 2021 -- present}  
+	\awardsentry{Mar 2021 -- Sep 2021}  
 	{Member of the Diversity Committee}
 	{Department of Physics \& Astronomy, Stony Brook University}
 	
+	\awardsentry{Sep 2017 -- May 2020}  
+	{Physics Department Representative}
+	{Student Council of Nazarbayev University}
 	
-	\tableentry{Jan 2021 -- present}  
+\section{Selected outreach}
+	\awardsentry{Jan 2021 -- present}  
 	{Writer for \href{https://astrobites.org/author/ssagynbayeva/}{Astrobites.org}, Chair of the Advertising and Undergraduate Committees}
 	{A website where graduate students publish daily summaries of recent papers on astro-ph.}
 
@@ -376,25 +370,23 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
 	
 	%------------------------------------------------
 	
-	\tableentry{Apr 2018 -- May 2020}  
+	\awardsentry{Apr 2018 -- May 2020}  
 	{President of the Women in Physics Club}
 	{Nazarbayev University}
 	
 
 	%------------------------------------------------
-	\tableentry{Oct 2017 -- Sep 2020}  
+	\awardsentry{Oct 2017 -- Sep 2020}  
 	{Volunteer at the “Education for all” center}
 	{An organization that helps children with mental and physical disabilities. 
 	
 	I organized the first three inclusive musical theatre performances in Kazakhstan}
 	
-	\tableentry{Sep 2017 -- May 2020}  
-	{Physics Department Representative}
-	{Student Council of Nazarbayev University}
+	
 %------------------------------------------------
 
 	%------------------------------------------------
-\tableentry{Nov 2017}  
+\awardsentry{Nov 2017}  
 {Coordinator of the Children's Development Foundation's \textit{Warm Winter} project}
 {Coordinated a group of students to help low-income families that cannot afford winter clothes for their kids.}
 
@@ -424,7 +416,7 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
 
 %------------------------------------------------
 
-\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+\begin{tabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
 
 	%------------------------------------------------
 	
@@ -437,19 +429,35 @@ Extrasolar Planet Orbiting a Dusty, Accelerating Star."} \textit{In prep.} (2022
 	{} %Honours
 	{} % Institution
 	{}
+	%------------------------------------------------
+	
+	\educationentry{Hydro codes} % Duration
+	{} % Degree
+	{Athena++, PLUTO} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	%------------------------------------------------
+	
+	\educationentry{N-body codes} % Duration
+	{} % Degree
+	{REBOUND} % Department
+	{} %Honours
+	{} % Institution
+	{}
 	
 	%------------------------------------------------
 	
 	\educationentry{Other} % Duration
 	{} % Degree
-	{Athena++, REBOUND, PLUTO, Mathematica, ds9, \LaTeX} % Department
+	{Mathematica, ds9, \LaTeX} % Department
 	{} %Honours
 	{} % Institution
 	{}
 	
 	%------------------------------------------------
 
-\end{supertabular}
+\end{tabular}
 \section{Languages}
 English (advanced), Russian (native), Spanish (B1)
 %----------------------------------------------------------------------------------------
@@ -468,7 +476,7 @@ English (advanced), Russian (native), Spanish (B1)
 
 %------------------------------------------------
 
-\begin{supertabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
+\begin{tabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
 
 	%------------------------------------------------
 	
@@ -477,7 +485,7 @@ English (advanced), Russian (native), Spanish (B1)
 	
 	\educationentry{Songwriting} % Duration
 	{} % Degree
-	{1 album, 3 singles on \href{http://sabinasagynbayeva.tilda.ws/music}{all streaming platforms}} % Department
+	{1 album, 3 singles on \href{https://ssagynbayeva.github.io/music}{all streaming platforms}} % Department
 	{} %Honours
 	{} % Institution
 	{}
@@ -505,7 +513,7 @@ English (advanced), Russian (native), Spanish (B1)
 	{}
 	%------------------------------------------------
 
-\end{supertabular}
+\end{tabular}
 \end{paracol}
 
 %----------------------------------------------------------------------------------------
