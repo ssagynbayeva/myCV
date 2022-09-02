@@ -8,7 +8,7 @@ jobs:
   paper:
     runs-on: ubuntu-latest
     env:
-      DIR:
+#       DIR: 
       FILE: cv
     steps:
       - name: Checkout
@@ -16,9 +16,15 @@ jobs:
       - name: Install TeXlive
         run: sudo apt-get update && sudo apt-get install texlive-xetex texlive-publishers texlive-science latexmk cm-super
       - name: LaTeX compile
-        working-directory: ${{ env.DIR }}
+#         working-directory: ${{ env.DIR }}
         # run: latexmk -pdf -bibtex ${{ env.FILE }}
         run: xelatex -interaction=nonstopmode -halt-on-error ${{ env.FILE }};
+      - name: Build the PDFs
+        uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+            apk add make
+            make ssagynbayeva_cv.pdf
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
