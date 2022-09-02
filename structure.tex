@@ -20,7 +20,7 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{etoolbox} % Required for conditional statements
-
+\usepackage{amsmath}
 \setlength\parindent{0pt} % Stop paragraph indentation
 
 \usepackage{supertabular} % Required for the supertabular environment which allows tables to span multiple pages so sections with tables correctly wrap across pages
@@ -68,7 +68,7 @@ SmallCapsFont=*-SC.ttf
 \newfontfamily{\FA}[Path=fonts/]{FontAwesome} % Create a new font family for FontAwesome icons, provided with the template in the fonts folder
 \input{fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the fonts folder
 
-% \usepackage[sf,scale=0.95]{libertine} % Load Libertine as a \sffamily font for sans serif titles
+\usepackage[sf,scale=0.95]{libertine} % Load Libertine as a \sffamily font for sans serif titles
 
 %----------------------------------------------------------------------------------------
 %	COLOURS AND LINKS
@@ -140,12 +140,25 @@ SmallCapsFont=*-SC.ttf
 }
 
 % Command for entering a separate table row -- used as a generic visual element for any section that uses a two column table
+\usepackage{amsmath}
 \newcommand{\tableentry}[3]{
 \vspace*{-1mm}
 	{\raggedleft\textsc{#1{\hspace{6pt}}}\par}
-	\expandafter\ifstrequal\expandafter{\textbf{#2}{}}{}{}{{\raggedright \textbf{#2}{}}\\}%expandafter%\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}% First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
+	\expandafter\ifstrequal\expandafter{\textbf{#2}{}}{}{}
+	{{\raggedright \textbf{#2}{}}\\}
+	%\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}
+	% First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it
 	\expandafter\ifstrequal\expandafter{#3}{}{}{& #3\\}
 \vspace*{-5mm}
+}
+
+\newcommand{\awardsentry}[3]{
+\vspace*{-1mm}
+	{\raggedleft\textsc{#1{\hspace{6pt}}}\par} % the time period
+% 	 \expandafter\ifstrequal\expandafter{#3}{}{}{{\raggedright\large\textit{\textbf{#3}}}\\[4pt]} % Employer
+	\expandafter\ifstrequal\expandafter{#2}{}{}{{\raggedright\textbf{#2}}\\[2pt]} % Award title
+	\expandafter\ifstrequal\expandafter{#3}{}{}{#3\\} % Description
+	\vspace*{-5mm}
 }
 
 % Command for entering a long-form description where there is a title on one line and a paragraph description below it
