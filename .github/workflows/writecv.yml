@@ -8,8 +8,8 @@ jobs:
   paper:
     runs-on: ubuntu-latest
     env:
-      DIR: CV
-      FILE: cv_3
+      DIR:
+      FILE: cv
     steps:
       - name: Checkout
         uses: actions/checkout@v2
