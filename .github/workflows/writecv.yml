@@ -49,6 +49,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        run: git pull origin master
       - uses: actions/download-artifact@v2
         with:
           path: ssagynbayeva_cv.pdf
