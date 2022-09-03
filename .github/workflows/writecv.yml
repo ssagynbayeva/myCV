@@ -3,14 +3,7 @@
 # https://github.com/ssagynbayeva/reponame/blob/build/filename.pdf
 
 name: writecv
-# on: [push]
-on:
-  push:
-  pull_request:
-    branches: [master]
-  workflow_dispatch:
-  schedule:
-    - cron: "00 00 * * 1"
+on: [push]
     
 jobs:
   paper:
