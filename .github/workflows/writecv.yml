@@ -37,7 +37,7 @@ jobs:
       - name: Publish
         shell: bash -l {0}
         run: |
-          git checkout --orphan master-pdf
+          git checkout --orphan build
           git rm --cached -rf . > /dev/null 2>&1
           git add -f ssagynbayeva_cv.pdf 
           git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
