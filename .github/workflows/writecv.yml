@@ -1,6 +1,7 @@
 # Github workflow to compile latex and deploy the pdf to an orphan branch.
 # The latest compiled pdf is at available at e.g.
 # https://github.com/ssagynbayeva/reponame/blob/build/filename.pdf
+# Davide Gerosa (2021) https://github.com/dgerosa
 
 name: writecv
 on: [push]
@@ -20,31 +21,30 @@ jobs:
         run: sudo apt-get update && sudo apt-get install texlive-xetex texlive-publishers texlive-science latexmk cm-super
       - name: LaTeX compile
 #         working-directory: ${{ env.DIR }}
-        # run: latexmk -pdf -bibtex ${{ env.FILE }}
-        # run: xelatex cv.tex;
         run: latexmk -xelatex -dvi- -ps-  'ssagynbayeva_cv.tex';
-      - name: Build the PDFs
-        uses: xu-cheng/texlive-action/full@v1
-        with:
-          run: |
-            apk add make
-            make ssagynbayeva_cv.pdf
+#       - name: Build the PDFs
+#         uses: xu-cheng/texlive-action/full@v1
+#         with:
+#           run: |
+#             apk add make
+#             make ssagynbayeva_cv.pdf
       - name: move
-        run: mv ssagynbayeva_cv.pdf ./github_artifacts
+        # run: mv ssagynbayeva_cv.pdf ./github_artifacts
+        run: mkdir -p github_artifacts && mv ${{ env.FILE }}.pdf ./github_artifacts
       - name: Upload pdf as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ssagynbayeva_cv.pdf
-#           path: ./github_artifacts
-          path: ssagynbayeva_cv.pdf
-      - name: Publish
-        shell: bash -l {0}
-        run: |
-          git checkout --orphan build
-          git rm --cached ssagynbayeva.pdf
-          git add -f ssagynbayeva_cv.pdf 
-          git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
-          git push -q -f https://github.com/$GITHUB_REPOSITORY build > /dev/null 2>&1
+          name: ${{ env.FILE }}.pdf
+          path: ./github_artifacts
+          # path: ssagynbayeva_cv.pdf
+#       - name: Publish
+#         shell: bash -l {0}
+#         run: |
+#           git checkout --orphan build
+#           git rm --cached ssagynbayeva.pdf
+#           git add -f ssagynbayeva_cv.pdf 
+#           git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
+#           git push -q -f https://github.com/$GITHUB_REPOSITORY build > /dev/null 2>&1
   deploy:
     # Edit here if compiling multiple papers
     needs: [paper]
@@ -54,9 +54,11 @@ jobs:
         uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
-          path: ssagynbayeva_cv.pdf
+          # path: ssagynbayeva_cv.pdf
+          path: github_artifacts
       - name: move
-        run: mkdir -p github_deploy && mv ssagynbayeva_cv.pdf github_deploy
+#         run: mkdir -p github_deploy && mv ssagynbayeva_cv.pdf github_deploy
+        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
