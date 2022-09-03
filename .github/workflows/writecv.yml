@@ -21,7 +21,8 @@ jobs:
       - name: LaTeX compile
 #         working-directory: ${{ env.DIR }}
         # run: latexmk -pdf -bibtex ${{ env.FILE }}
-        run: xelatex cv.tex;
+        # run: xelatex cv.tex;
+        run: pdflatex cv.tx;
       - name: Build the PDFs
         uses: xu-cheng/texlive-action/full@v1
         with:
