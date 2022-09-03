@@ -38,10 +38,10 @@ jobs:
         shell: bash -l {0}
         run: |
           git checkout --orphan build
-          git rm --cached -rf . > /dev/null 2>&1
+          git rm --cached ssagynbayeva.pdf
           git add -f ssagynbayeva_cv.pdf 
           git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
-          git push -q -f https://github.com/$GITHUB_REPOSITORY master-pdf > /dev/null 2>&1
+          git push -q -f https://github.com/$GITHUB_REPOSITORY build > /dev/null 2>&1
   deploy:
     # Edit here if compiling multiple papers
     needs: [paper]
