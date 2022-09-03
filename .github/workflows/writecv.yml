@@ -3,7 +3,15 @@
 # https://github.com/ssagynbayeva/reponame/blob/build/filename.pdf
 
 name: writecv
-on: [push]
+# on: [push]
+on:
+  push:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+  schedule:
+    - cron: "00 00 * * 1"
+    
 jobs:
   paper:
     runs-on: ubuntu-latest
@@ -37,10 +45,9 @@ jobs:
         run: |
           git checkout --orphan master-pdf
           git rm --cached -rf . > /dev/null 2>&1
-          git add -f ssagynbayeva_cv.pdf
-          # git add -f pubs.json metrics.json stars.json citedates.txt
+          git add -f ssagynbayeva_cv.pdf 
           git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
-          git push -q -f https://github.com/$GITHUB_REPOSITORY main > /dev/null 2>&1
+          git push -q -f https://github.com/$GITHUB_REPOSITORY master-pdf > /dev/null 2>&1
   deploy:
     # Edit here if compiling multiple papers
     needs: [paper]
