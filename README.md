@@ -6,4 +6,4 @@
   &copy 2022 Sabina Sagynbayeva.
 </p>
 
-_Based on [Alessandro Plasmati's CV](https://www.latextemplates.com/template/plasmati-cv) and [Rodrigo Luger's CV](https://github.com/rodluger/cv)._
+_Based on [Alessandro Plasmati's CV](https://www.latextemplates.com/template/plasmati-cv), [Rodrigo Luger's CV](https://github.com/rodluger/cv), and [Davide Gerosa's paper-building workflow](https://github.com/dgerosa/writeapaper)._
