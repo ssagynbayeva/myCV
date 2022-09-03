@@ -16,13 +16,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - run: git pull origin master
       - name: Install TeXlive
         run: sudo apt-get update && sudo apt-get install texlive-xetex texlive-publishers texlive-science latexmk cm-super
       - name: LaTeX compile
 #         working-directory: ${{ env.DIR }}
         # run: latexmk -pdf -bibtex ${{ env.FILE }}
-        run: xelatex -interaction=nonstopmode -halt-on-error ${{ env.FILE }};
+        run: xelatex cv.tex;
       - name: Build the PDFs
         uses: xu-cheng/texlive-action/full@v1
         with:
