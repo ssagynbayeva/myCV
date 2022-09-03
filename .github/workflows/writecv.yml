@@ -53,7 +53,7 @@ jobs:
         with:
           path: ssagynbayeva_cv.pdf
       - name: move
-        run: mkdir -p github_deploy && mv ssagynbayeva_cv.pdf/*/* github_deploy
+        run: mkdir -p github_deploy && mv ssagynbayeva_cv.pdf github_deploy
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
