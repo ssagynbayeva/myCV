@@ -32,15 +32,16 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ssagynbayeva_cv.pdf
-          path: ./github_artifacts
-      - name: Publish
-        shell: bash -l {0}
-        run: |
-          git checkout --orphan master-pdf
-          git rm --cached -rf . > /dev/null 2>&1
-          git add -f ssagynbayeva_cv.pdf 
-          git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
-          git push -q -f https://github.com/$GITHUB_REPOSITORY master-pdf > /dev/null 2>&1
+#           path: ./github_artifacts
+          path: ssagynbayeva_cv.pdf
+#       - name: Publish
+#         shell: bash -l {0}
+#         run: |
+#           git checkout --orphan master-pdf
+#           git rm --cached -rf . > /dev/null 2>&1
+#           git add -f ssagynbayeva_cv.pdf 
+#           git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
+#           git push -q -f https://github.com/$GITHUB_REPOSITORY master-pdf > /dev/null 2>&1
   deploy:
     # Edit here if compiling multiple papers
     needs: [paper]
