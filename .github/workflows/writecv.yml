@@ -4,6 +4,7 @@
 
 name: writecv
 on: [push]
+    
 jobs:
   paper:
     runs-on: ubuntu-latest
@@ -31,16 +32,16 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ssagynbayeva_cv.pdf
-          path: ./github_artifacts
-      - name: Publish
-        shell: bash -l {0}
-        run: |
-          git checkout --orphan master-pdf
-          git rm --cached -rf . > /dev/null 2>&1
-          git add -f ssagynbayeva_cv.pdf
-          # git add -f pubs.json metrics.json stars.json citedates.txt
-          git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
-          git push -q -f https://github.com/$GITHUB_REPOSITORY main > /dev/null 2>&1
+#           path: ./github_artifacts
+          path: ssagynbayeva_cv.pdf
+#       - name: Publish
+#         shell: bash -l {0}
+#         run: |
+#           git checkout --orphan master-pdf
+#           git rm --cached -rf . > /dev/null 2>&1
+#           git add -f ssagynbayeva_cv.pdf 
+#           git -c user.name='gh-actions' -c user.email='gh-actions' commit -m "rebuild pdf"
+#           git push -q -f https://github.com/$GITHUB_REPOSITORY master-pdf > /dev/null 2>&1
   deploy:
     # Edit here if compiling multiple papers
     needs: [paper]
@@ -50,9 +51,9 @@ jobs:
         uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
-          path: github_artifacts
+          path: ssagynbayeva_cv.pdf
       - name: move
-        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
+        run: mkdir -p github_deploy && mv ssagynbayeva_cv.pdf github_deploy
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
