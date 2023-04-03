@@ -120,7 +120,30 @@ SmallCapsFont=*-SC.ttf
 %----------------------------------------------------------------------------------------
 %	CUSTOM COMMANDS
 %----------------------------------------------------------------------------------------
+% literature links--use doi if you can
+\newcommand{\doi}[2]{\emph{\addfontfeature{Color=linkblue}\href{http://dx.doi.org/#1}{{#2}}}}
+\newcommand{\link}[2]{\emph{\addfontfeature{Color=linkblue}\href{#1}{{#2}}}}
+\newcommand{\ads}[2]{{\addfontfeature{Color=linkblue}\href{http://adsabs.harvard.edu/abs/#1}}{{#2}}}
+\newcommand{\arxiv}[2]{\emph{\addfontfeature{Color=linkblue}\href{http://arxiv.org/abs/#1}{{#2}}}}
+\newcommand{\isbn}[1]{{\footnotesize(\textsc{isbn:}{#1})}}
 
+% Journal names.
+\newcommand{\aj}{AJ}
+\newcommand{\apj}{ApJ}
+\newcommand{\pasp}{PASP}
+\newcommand{\mnras}{MNRAS}
+
+\newcommand{\pubslist}{%
+    \rightmargin=0in
+    \leftmargin=0.15in
+    \topsep=0ex
+    \partopsep=0pt
+    \itemsep=1.25ex
+    \parsep=0pt
+    \itemindent=-1.0\leftmargin
+    \listparindent=0.0\leftmargin
+    \settowidth{\labelsep}{~}
+}
 % Command for entering a new work position
 \newcommand{\workposition}[5]{
 \vspace*{-1mm}
