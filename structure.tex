@@ -184,6 +184,15 @@ SmallCapsFont=*-SC.ttf
 	\vspace*{-5mm}
 }
 
+\newcommand{\talksentry}[2]{
+\vspace*{-1mm}
+	{\raggedleft\textsc{#1{\hspace{6pt}}}\par} % the time period
+% 	 \expandafter\ifstrequal\expandafter{#3}{}{}{{\raggedright\large\textit{\textbf{#3}}}\\[4pt]} 
+	% \expandafter\ifstrequal\expandafter{#2}{}{}{{\raggedright\textbf{#2}}\\[2pt]} 
+	\expandafter\ifstrequal\expandafter{#2}{}{}{#2\\} % Description
+	\vspace*{-5mm}
+}
+
 % Command for entering a long-form description where there is a title on one line and a paragraph description below it
 \newcommand{\longformdescription}[2]{
 	\textit{#1}\\[3pt]
