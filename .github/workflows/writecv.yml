@@ -32,7 +32,7 @@ jobs:
         # run: mv ssagynbayeva_cv.pdf ./github_artifacts
         run: mkdir -p github_artifacts && mv ${{ env.FILE }}.pdf ./github_artifacts
       - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.FILE }}.pdf
           path: ./github_artifacts
